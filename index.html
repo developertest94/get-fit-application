@@ -5,11 +5,14 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Get Fit Application</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="main.css">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-
+<div class="wrapper">
     <!-- header starts-->
 
       <header class="global-header" id="top-nav">
@@ -26,7 +29,7 @@
             <li id="menu-3-button">BLOG</li>
             <li id="menu-4-button">LOGIN</li>
           </ul>
-          <p class="Free-trial" id="getTrial">GET FREE TRIAL</p>
+          <p class="Free-trial" id="getTrial" data-toggle="modal" data-target="#getTrialForm">GET FREE TRIAL</p>
           <div class="hamburger-menu" id="menu-trigger">
             <img src="hamburger.svg" alt="Hamburger icon">
           </div>
@@ -42,7 +45,7 @@
         <div class="main-hero-content">
           <h1>YOUR PERSONAL FITNESS JUST GOT BETTER</h1>
           <h3>A fitness app and so much more! Take your workouts to the next-level with fitness coaching from team of experts.</h3>
-          <h2 class="Free-trial" >START FREE TRIAL</h2>
+          <h2 class="Free-trial" data-toggle="modal" data-target="#getTrialForm">START FREE TRIAL</h2>
         </div>
      </section>
 
@@ -87,7 +90,231 @@
         </div>
     </section>
      
-     
+<!--Workout section-->
+
+    <section class="features" id="workout-programs">
+      <div class="features-heading">
+      <h2>Training that will make you sweat</h2>
+      <p>Over 4,000 workouts at their fingertips. Try one now.</p>
+      </div>
+      <div class="gallery">
+      <button class="prev">←</button>
+       <div class="carousel-wrapper"> 
+      <div class="workout-cards-section">
+        <div class="workout-card">
+          <div class="workout-img" id="img1"></div>
+          <div class="workout-details">
+            <p>Total-body burn</p>
+            <p>Grab your dumbbells to feel the strength burning from your biceps to your glutes.</p>
+            <p class="mins">60 mins session</p>
+          </div>
+        </div>
+         <div class="workout-card">
+          <div class="workout-img" id="img2"></div>
+          <div class="workout-details">
+            <p>Glute strength</p>
+            <p>Hit your glutes with this workout from Ingrid's body-part target series. All you need is dumbbells.</p>
+            <p class="mins">18 mins session</p>
+          </div>
+        </div>
+       
+         <div class="workout-card" >
+          <div class="workout-img" id="img3"></div>
+          <div class="workout-details">
+            <p>Bodyweight cardio blast</p>
+            <p>It's short, it's sharp and it's gonna get tough!</p>
+            <p class="mins">25 mins session</p>
+          </div>
+          </div>
+          <div class="workout-card">
+            <div class="workout-img" id="img4"></div>
+            <div class="workout-details">
+              <p>Power Shred: Active arms</p>
+              <p>Cut fat and build power at home.</p>
+              <p class="mins">35 mins session</p>
+            </div>
+          </div>
+           <div class="workout-card">
+            <div class="workout-img" id="img5"></div>
+            <div class="workout-details">
+              <p>Intense cardio burner</p>
+              <p>Challenge your cardio fitness and feel the burn with this full-body fabric band blast.</p>
+              <p class="mins">20 mins session</p>
+            </div>
+        </div>
+      </div>
+    </div><!--caurosal wrapper-->
+    <button class="next">→</button>
+    </div><!--gallery-->
+    </section>
+
+
+
+    <!--Meals section-->
+
+    <section class="features" id="personalised-meal-programs">
+      <div class="features-heading">
+      <h2>Meals for you</h2>
+      <p>Try a handful of the 1000+ meals, enjoy daily.</p>
+      </div>
+      <div class="gallery">
+      <button class="prevmeal">&lt;</button>
+       <div class="carousel-wrapper"> 
+      <div class="meal-cards-section">
+        <div class="meal-card">
+          <div class="meal-img" id="fimg1"></div>
+          <div class="meal-details">
+            <p>Veggie-packed Fried Rice</p>
+            <p>Family Food</p>
+            <p class="mins">5 mins</p>
+          </div>
+        </div>
+        <div class="meal-card">
+          <div class="meal-img" id="fimg2"></div>
+          <div class="meal-details">
+            <p>Pan-seared Garlic Steak with Asparagus & Almonds</p>
+            <p>Family Food, High Protein</p>
+            <p class="mins">10 mins</p>
+          </div>
+          </div>
+          <div class="meal-card">
+            <div class="meal-img" id="fimg3"></div>
+            <div class="meal-details">
+            <p>Smashed Beef Tacos</p>
+            <p>Family Food</p>
+            <p class="mins">15 mins</p>
+          </div>
+        </div>
+       
+        <div class="meal-card">
+          <div class="meal-img" id="fimg4"></div>
+          <div class="meal-details">
+            <p>Zesty Chicken Salad with Blueberries</p>
+            <p>Easy, Low ingredients, Meal prep</p>
+            <p class="mins">10 mins</p>
+          </div>
+          </div>
+          <div class="meal-card">
+            <div class="meal-img" id="fimg5"></div>
+            <div class="meal-details">
+              <p>Pear & Lemon Green Smoothie</p>
+              <p>Vegan , Low ingredients, Easy</p>
+              <p class="mins">5 mins </p>
+            </div>
+          </div>
+      </div>
+    </div><!--caurosal wrapper-->
+    <button class="nextmeal">&gt;</button>
+    </div><!--gallery-->
+    </section>
+
+
+
+<!--Testimonials section-->
+
+<section class="testimonial-section">
+  <h2>Testimonials</h2>  
+  <div id="testimonial-Carousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#testimonial-Carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#testimonial-Carousel" data-slide-to="1"></li>
+      <li data-target="#testimonial-Carousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+<div class="carousel-inner">
+
+    <div class="item active">
+        <div class="testimony-card">
+           <img src="professional-lady.jpeg" />
+           <h4>Lidia Clarke</h4>
+           <p>"My body transformation has been incredible. Whilst having more body confidence is amazing, having a new mental outlook on exercise and challenging myself is the real accomplishment "</p>
+        </div>
+    </div>
+
+
+   <div class=" item">
+    <div class="testimony-card">
+      <img src="man.jpg" />
+      <h4>Joe Mitheri</h4>
+      <p>"PowerStrength helped me gain strength and lose 12 pounds… I have less stress, I sleep better, and I eat better"</p>
+    </div>
+  </div>
+    
+  <div class=" item">
+      <div class="testimony-card">
+        <img src="lady.png" />
+        <h4>Sarah English</h4>
+        <p>"It’s been hard work but I’m so happy with my transformation."</p>
+      </div>
+  </div>
+</div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#testimonial-Carousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#testimonial-Carousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</section>
+
+<!--Footer-->
+
+<footer>
+  <div>
+    <img src="https://icons.iconarchive.com/icons/fa-team/fontawesome-brands/512/FontAwesome-Brands-Square-Youtube-icon.png" alt="youtube Icon">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt="twitter"/>
+    <img src="https://www.freeiconspng.com/thumbs/logo-twitter-png/black-logo-twitter-26.png" alt="instagram Icon">
+
+  </div>
+  <ul>
+    <li>CAREERS</li>
+    <li>FAQ</li>
+    <li>TERMS</li>
+    <li>PRIVACY</li>
+  </ul>
+  <p>A healthy, balanced diet and regular exercise are necessary for weight loss, maintenance, muscle building or toning. Please discuss your decision to begin a fitness or diet program with a healthcare professional and remember - everybody is different, so results may vary.</p>
+</footer>
+
+ 
+
+<!-- Get Trial form Modal -->
+
+  <div class="modal fade" id="getTrialForm" role="dialog">
+    <div class="modal-dialog ">
+       <div class="modal-content">
+       <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h1>GET FIT</h1>
+          <h2 class="modal-title">Start your 7 day free trial</h2>
+          <h4>Cancel any time.</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <fieldset>
+             
+            <input type="text" id="firstName" class="form-control" placeholder="FIRST NAME">
+            <input type="text" id="lastName" class="form-control" placeholder="LAST NAME">
+            <input type="email" id="email" class="form-control" placeholder="EMAIL">
+            <input type="password" id="pwd" class="form-control" placeholder="PASSWORD">
+            <input type="checkbox" id="checkbox1"><label for="checkbox1">Get Expert advice to your inbox</label>
+            
+            <button type="submit"> CREATE ACCOUNT</button>
+            </fieldset>  
+          </form>
+        </div>
+       </div>
+    </div>
+  </div>
+</div>
+
+
+
       <!--Dropdown Menu-->
       
 <div id="shop-Dropdown" class="dropdown-Box">
@@ -121,7 +348,7 @@
           <li>Shop</li>
           <li>Blog</li>
           <li>Login</li>
-          <li class="Free-trial" id='button-trial'>GET FREE TRIAL</li>
+          <li class="Free-trial" id='button-trial' data-toggle="modal" data-target="#getTrialForm">GET FREE TRIAL</li>
          </ul>
       </aside>
 
@@ -130,5 +357,6 @@
         
 
         <script src="script.js"></script>
+        </div>
    </body>
 </html>

@@ -3,6 +3,12 @@
 body {
     font-family: 'Lato', sans-serif;
     height: 100vh;
+    overflow-x: hidden;
+    width:100%;
+   }
+   .wrapper{
+    overflow-x: hidden;
+    position: relative;
    }
    .global-header {
     background-color:black;
@@ -12,10 +18,10 @@ body {
     justify-content: space-between;
     height: 40px;
     padding: 15px 5px;
+    z-index:1;
     /* width: calc(100% - 50px); */
   }
-  
-  .nav-left {
+   .nav-left {
     align-items: center;
     display: flex;
   }
@@ -24,17 +30,13 @@ body {
     display: none;
     font-weight:bolder;
   }
-  
-  .logo img {
+    .logo img {
     width: 150px;
- 
-  }
-  
-  ul {
+   }
+    ul {
     list-style: none;
   }
-  
-  .nav li {
+    .nav li {
     font-size: 14px;
     margin: 0 20px;
     cursor: pointer;
@@ -79,9 +81,12 @@ body {
     color:#fff;
     transition:1s transform linear;
     transform:translateX(100%);
+   
   }
   .side-menu.active{
+   
     transform:translateX(0%);
+ 
   }
   .side-menu-header{
     padding:20px 10px 20px 0;
@@ -121,8 +126,7 @@ body {
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
-  
-  }
+    }
   .dropdown-Box{
     display:none;
     position:absolute;
@@ -179,8 +183,7 @@ body {
       }
       .features-heading{
         text-align:center;
-        
-      }
+             }
       .item{
         display:grid;
         grid-template-columns: auto auto ;
@@ -193,8 +196,7 @@ body {
       }
       .feature-icon{
          grid-row: 1 / span 2;
-        
-      }
+            }
       .feature-icon img{
        width:80px;
         margin:0 20px;
@@ -209,56 +211,253 @@ body {
         align-items: center;
         flex-direction: column-reverse;
       }
-     
-      .hero2 img{
+        .hero2 img{
         object-fit: contain;
         max-height:100%;
         width: 100%;
       }
-  @media (min-width: 960px) {
-    .logo img {
-        width: 250px;
-           }
-    .nav-right .nav  {
-      display: flex;
-      position:relative;
-    }
-    #getTrial{
-        display: block; 
+      #workout-programs{
+         background-color:#e9eff0;
+         padding:20px 0;
+       }
+       #personalised-meal-programs{
+        background-color:#333;
+        padding:20px 0;
+        }
+        #personalised-meal-programs .features-heading{
+          color:#e9eff0
+        }
+       .gallery{
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        overflow: hidden;
       }
-    #menu-trigger{
-      display:none;
-    }
+      .carousel-wrapper {
+        overflow: hidden;
+        width: 230px;  
+      }
+      .workout-cards-section,  .meal-cards-section{
+        display:flex;
+        justify-content:space-around;
+        transition: transform 0.5s ease-in-out;
+        width: calc(200px * 5); /* 5 slides at 100px each */ 
+        margin:15px auto;
+      }
+      .workout-card, .meal-card{
+        display:flex;
+        flex-direction:column;
+        border:solid 1px #333;
+        margin:15px;
+        flex: 0 0 200px;
+        justify-content:space-around;
+        transition: transform 0.5s;
+      }
+      .workout-card:hover, .meal-card:hover{
+        transform: scale(1.1);
+      }
+      #workout-programs button {
+        background-color: lightgray;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 40px;
+       }
+       #personalised-meal-programs button {
+        background-color: #333;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 40px;
+        color:#fff;
+       }
+      .workout-img, .meal-img{
+         background-image:url('');
+         background-size:cover;
+         height:160px;
+         background-position: center;
+       }
+       #img1{
+         background-image:url('bruce-mars-WGN6ZEFEZbs-unsplash.jpg');
+       }
+       #img3{
+        background-image:url('wrkout2.jpg');
+      }
+      #img2{
+        background-image:url('core-workouts-at-home.png');
+      }
+      #img4{
+      background-image:url('PhysicalActivityLP_804x482.jpg');
+      } 
+      #img5{
+        background-image:url('wrkout1.jpg');
+      }
+      #fimg1{
+        background-image:url('friedrice.jpg');
+      }
+      #fimg2{
+       background-image:url('steak.jpg');
+     }
+     #fimg3{
+       background-image:url('tacos.jpg');
+     }
+     #fimg4{
+     background-image:url('Blueberry-Chicken-Salad.jpg');
+     } 
+     #fimg5{
+       background-image:url('green-smoothie.jpg');
+     }
+      .workout-details, .meal-details{
+         padding:10px 10px 30px;
+         background-color:#fff;
+         flex-grow:1;
+         position:relative;
+       }
+       .workout-details p:first-child, .meal-details p:first-child{
+         margin:0;
+         font-weight:bolder;
+         font-size:1rem;
+       }
+       .mins{
+        font-size:10px;
+        color:grey;
+        border:grey 1px solid;
+        width:fit-content;
+        padding:4px;
+        background-color:#9cf8e0;
+        border-radius:10px;
+        position:absolute;
+        bottom:0px;
+      }
+      .testimony-card{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        padding:20px;
+        width:fit-content;
+        margin:20px auto;
+      }
+      #testimonial-Carousel{
+        margin:30px auto 40px;
+        width: fit-content;;
+      }
+      #testimonial-Carousel img{
+        width:300px;
+        height:250px;
+        border:solid 2px #fff;
+      }
+      .testimony-card p{
+        width:300px;
+        height:150px;
+        margin:auto;
+        text-align:center;
+        padding:10px;
+      }
+      .item  h4, .testimonial-section h2{
+        text-align:center;
+      }
+      .carousel-indicators li{
+        border:1px solid #333;
+      }
+      .carousel-indicators.active{
+       background-color: #333;;
+      }
+      footer{
+        background-color: #e8f7f3;
+        padding:30px;
+        border-top: double;
+      }
+      footer img{
+        width:50px;
+        margin:15px;
+      }
+      footer ul{
+        margin:0;
+        padding:20px;
+      }
+      footer li{
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      footer p{
+      margin:0 15px;
+      }
+      .modal-header{
+        text-align:center;
+      }
+      .modal-header h1{
+        font-weight:bold;
+      }
+     .modal-body button{
+        display:block;
+        margin:10px auto;
+        text-align:center;
+        background-color: #28b463;
+        border: solid 1px #fff;
+        color: #17202a;
+        width: 100%;
+        padding: 10px;
+        font-size: 20px;
+
+      }
+      .modal-body input{
+
+        margin:10px auto;
+      }
+      .modal-body input[type=checkbox]{
+        display:inline-block;
+        margin-right:10px;
+        vertical-align:middle;
+      }
+  @media (min-width: 960px) {
     .main-hero-content{
         text-align:left;
         width:50%;
         padding:30px;
       }
-      .main-hero-content h1{
+    .main-hero-content h1{
         font-size:46px;
       }
-      .global-header {
-        padding: 15px 25px;
-      
-      }
-     
-  }
-  @media (min-width:768px) {
-    .section-contents{
-
-      grid-template-columns: auto auto auto;
-    
     }
+  @media (min-width:768px) {
+    .global-header {
+     position:fixed;
+     top:0;
+     width:100%;
+     padding: 35px 15px;
+    }
+    #menu-trigger{
+      display:none;
+    }
+    .logo img {
+      width: 200px;
+         }
+    .nav-right .nav{
+      display:flex;
+        }
+    #getTrial{
+      display: block; 
+    }
+    .section-contents{
+      grid-template-columns: auto auto auto;
+        }
     .hero2{
       width:50%;
       height:30rem;
     }
-    
     .feature-section
     {
-  
       flex-direction: row;
+      padding-bottom:20px;
+    }
+    .carousel-wrapper {
+        width:700px;
     }
 
+  }
+  @media (min-width:480px) {
+   
   }
   

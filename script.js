@@ -137,8 +137,8 @@ nextBtn1.addEventListener('click', () => {
     updateCarouselPosition1();
     setTimeout1(() => {
       carousel1.style.transition = 'transform 0.5s ease-in-out'; 
-      currentIndex1++;
-      updateCarouselPosition1();
+      // currentIndex1++;
+      // updateCarouselPosition1();
     }, 0);
   } else {
     updateCarouselPosition1();
@@ -155,8 +155,8 @@ prevBtn1.addEventListener('click', () => {
     updateCarouselPosition1();
     setTimeout1(() => {
       carousel1.style.transition = 'transform 0.5s ease-in-out'; 
-      currentIndex1--;
-      updateCarouselPosition1();
+      // currentIndex1--;
+      // updateCarouselPosition1();
     }, 0);
   } else {
     updateCarouselPosition1();

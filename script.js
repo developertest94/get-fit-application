@@ -65,7 +65,7 @@ function updateCarouselPosition() {
   carousel.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
 }
 
-// Move to the next set of slides
+// Move to the next set of slides in the carousal
 nextBtn.addEventListener('click', () => {
   currentIndex++;
 

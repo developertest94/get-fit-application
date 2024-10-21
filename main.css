@@ -204,6 +204,10 @@ ul {
   text-align: center;
 }
 
+.section-navigator a{
+  color: #fff;
+}
+
 .features-heading {
   text-align: center;
 }

@@ -1,27 +1,26 @@
 /*Code for SIDE MENU*/
 
-const closeButton= document.getElementById('close-button');
-const sideMenu= document.getElementsByClassName('side-menu');
-const hamburgerIcon= document.getElementById('menu-trigger');
-hamburgerIcon.addEventListener("click",function(){
-sideMenu[0].classList.add('active');
+const closeButton = document.getElementById('close-button');
+const sideMenu = document.getElementsByClassName('side-menu');
+const hamburgerIcon = document.getElementById('menu-trigger');
+hamburgerIcon.addEventListener("click", function () {
+  sideMenu[0].classList.add('active');
 });
-closeButton.addEventListener("click",function(){
-sideMenu[0].classList.remove('active');
+closeButton.addEventListener("click", function () {
+  sideMenu[0].classList.remove('active');
 });
 
 /* code for dropdown*/
 
-let shopDD= document.getElementById('shop-Dropdown');
-let blogDD= document.getElementById('blog-Dropdown');
-let shop=document.getElementById('menu-2-button');
-let blog=document.getElementById('menu-3-button');
-
-const header= document.getElementById('top-nav');
-header.addEventListener("mouseleave",function(){
-  shopDD.style.display='none';
-  blogDD.style.display='none';
- });
+let shopDD = document.getElementById('shop-Dropdown');
+let blogDD = document.getElementById('blog-Dropdown');
+let shop = document.getElementById('menu-2-button');
+let blog = document.getElementById('menu-3-button');
+const header = document.getElementById('top-nav');
+header.addEventListener("mouseleave", function () {
+  shopDD.style.display = 'none';
+  blogDD.style.display = 'none';
+});
 
 function showDropdown(dropdown) {
   shopDD.style.display = 'none';
@@ -29,16 +28,16 @@ function showDropdown(dropdown) {
   dropdown.style.display = 'block';
 }
 
-function hideDropdown(dropdown){
-  dropdown.style.display='none';
+function hideDropdown(dropdown) {
+  dropdown.style.display = 'none';
 }
 
 shop.addEventListener("mouseover", () => showDropdown(shopDD));
-shopDD.addEventListener("mouseover",() => showDropdown(shopDD));
-shopDD.addEventListener("mouseleave",() => hideDropdown(shopDD));
+shopDD.addEventListener("mouseover", () => showDropdown(shopDD));
+shopDD.addEventListener("mouseleave", () => hideDropdown(shopDD));
 blog.addEventListener("mouseover", () => showDropdown(blogDD));
-blogDD.addEventListener("mouseover",() => showDropdown(blogDD));
-blogDD.addEventListener("mouseleave",() => hideDropdown(blogDD));
+blogDD.addEventListener("mouseover", () => showDropdown(blogDD));
+blogDD.addEventListener("mouseleave", () => hideDropdown(blogDD));
 
 
 // code for workout carousal
@@ -69,10 +68,10 @@ function updateCarouselPosition() {
 // Move to the next set of slides
 nextBtn.addEventListener('click', () => {
   currentIndex++;
-  
+
   if (currentIndex >= totalSlideCount - visibleSlides) {
     // Reached the end, jump to the first real slide
-    currentIndex = visibleSlides; 
+    currentIndex = visibleSlides;
     carousel.style.transition = 'none'; // Disable transition for the jump
     updateCarouselPosition();
     setTimeout(() => {
@@ -88,7 +87,7 @@ nextBtn.addEventListener('click', () => {
 // Move to the previous set of slides
 prevBtn.addEventListener('click', () => {
   currentIndex--;
-  
+
   if (currentIndex < 0) {
     // Reached the beginning, jump to the last real slide
     currentIndex = totalSlideCount - visibleSlides - 1;
@@ -133,10 +132,10 @@ function updateCarouselPosition1() {
 // Move to the next set of slides
 nextBtn1.addEventListener('click', () => {
   currentIndex1++;
-  
+
   if (currentIndex1 >= totalSlideCount1 - visibleSlides1) {
     // Reached the end, jump to the first real slide
-    currentIndex1 = visibleSlides1; 
+    currentIndex1 = visibleSlides1;
     carousel1.style.transition = 'none'; // Disable transition for the jump
     updateCarouselPosition1();
     setTimeout1(() => {
@@ -152,7 +151,7 @@ nextBtn1.addEventListener('click', () => {
 // Move to the previous set of slides
 prevBtn1.addEventListener('click', () => {
   currentIndex1--;
-  
+
   if (currentIndex1 < 0) {
     // Reached the beginning, jump to the last real slide
     currentIndex1 = totalSlideCount1 - visibleSlides1 - 1;
@@ -165,5 +164,35 @@ prevBtn1.addEventListener('click', () => {
     }, 0);
   } else {
     updateCarouselPosition1();
+  }
+});
+
+
+
+// Form validation codes
+
+const firstName = document.getElementById('firstName');
+const lastName = document.getElementById('lastName');
+const email = document.getElementById('email');
+const password = document.getElementById('pwd');
+const form = document.getElementById('start-trial-form');
+let errorMessage = document.getElementById('error-message');
+
+form.addEventListener('submit', (e) => {
+  let pwd = password.value;
+  e.preventDefault();
+  if (!(pwd.length > 8 && /[A-Z]/.test(pwd) &&
+    /[a-z]/.test(pwd) &&
+    /[0-9]/.test(pwd) &&
+    /[^A-Za-z0-9]/.test(pwd))
+  ) {
+    errorMessage.innerText = "Password must be at least 8 characters long, include an uppercase letter, a lowercase letter, a number, and a special character.";
+    password.classList.add('error');
+  }
+  else {
+    password.classList.remove('error');
+    errorMessage.innerText = '';
+    console.log("lets submit");
+    form.submit();
   }
 });

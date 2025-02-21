@@ -77,7 +77,7 @@ ul {
 }
 
 .side-menu {
-  background-image: url('gym-settings.jpg');
+  background-image: url('Images/gym-settings.jpg');
   background-color: #611f69;
   position: fixed;
   top: 0;
@@ -135,7 +135,7 @@ ul {
 }
 
 #getfit-logo {
-  background-image: url('getFitImage.webp');
+  background-image: url('Images/getFitImage.webp');
   width: 150px;
   background-position: center;
   background-size: cover;
@@ -175,7 +175,7 @@ ul {
   color: whitesmoke;
   background-position: center;
   background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bruce-mars-gJtDg6WfMlQ-unsplash.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Images/bruce-mars-gJtDg6WfMlQ-unsplash.jpg');
   height: 678px;
   background-repeat: no-repeat;
 }
@@ -321,50 +321,50 @@ ul {
 
 .workout-img,
 .meal-img {
-  background-image: url('');
+  background-image: url('Images/');
   background-size: cover;
   height: 160px;
   background-position: center;
 }
 
 #img1 {
-  background-image: url('bruce-mars-WGN6ZEFEZbs-unsplash.jpg');
+  background-image: url('Images/bruce-mars-WGN6ZEFEZbs-unsplash.jpg');
 }
 
 #img3 {
-  background-image: url('wrkout2.jpg');
+  background-image: url('Images/wrkout2.jpg');
 }
 
 #img2 {
-  background-image: url('core-workouts-at-home.png');
+  background-image: url('Images/core-workouts-at-home.png');
 }
 
 #img4 {
-  background-image: url('PhysicalActivityLP_804x482.jpg');
+  background-image: url('Images/PhysicalActivityLP_804x482.jpg');
 }
 
 #img5 {
-  background-image: url('wrkout1.jpg');
+  background-image: url('Images/wrkout1.jpg');
 }
 
 #fimg1 {
-  background-image: url('friedrice.jpg');
+  background-image: url('Images/friedrice.jpg');
 }
 
 #fimg2 {
-  background-image: url('steak.jpg');
+  background-image: url('Images/steak.jpg');
 }
 
 #fimg3 {
-  background-image: url('tacos.jpg');
+  background-image: url('Images/tacos.jpg');
 }
 
 #fimg4 {
-  background-image: url('Blueberry-Chicken-Salad.jpg');
+  background-image: url('Images/Blueberry-Chicken-Salad.jpg');
 }
 
 #fimg5 {
-  background-image: url('green-smoothie.jpg');
+  background-image: url('Images/green-smoothie.jpg');
 }
 
 .workout-details,
@@ -425,7 +425,7 @@ ul {
 }
 
 .item h4,
-.testimonial-section h2 {
+.  h2 {
   text-align: center;
 }
 
